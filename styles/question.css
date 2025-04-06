@@ -5,6 +5,7 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  background-color: #ece6dd;
   font-family: 'LXGW WenKai Mono TC', 'Noto TCSans', sans-serif;
 }
 
@@ -60,10 +61,21 @@ body {
   color: white;
 }
 
+
+
+.nav-buttons {
+  position: relative;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+
 .button-right {
-  position: fixed;
-  bottom: 5vh;
+  position: absolute;
   left: 75%;
+  top: 10px;
   transform: translateX(-50%);
   width: 150px;
   height: 100px;
@@ -84,9 +96,9 @@ body {
   filter: brightness(1.1);
 }
 .button-left {
-  position: fixed;
-  bottom: calc(5vh + 10px);
+  position: absolute;
   left: 25%;
+  top : 0;
   transform: translateX(-50%);
   width: 150px;
   height: 100px;
