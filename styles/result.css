@@ -1,0 +1,36 @@
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #fff8f0;
+    color: #5e4a3c;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h1 {
+    margin-bottom: 2rem;
+  }
+  
+  #result-container {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+    background: #fff6e5;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .result-group {
+    margin-bottom: 2rem;
+  }
+  
+  .result-group h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .result-item {
+    margin-left: 1rem;
+    font-size: 1rem;
+  }
+  

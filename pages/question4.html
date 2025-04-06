@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>題目</title>
+  <link rel="stylesheet" href="../styles/question.css" />
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="question-container">
+    <!-- 題號與進度條 -->
+    <div class="question-header">
+      <div class="question-number" id="question-number" data-question="3">第 4 題</div>
+      <div class="progress-bar">
+        <div class="progress" id="progress" data-progress="40"></div>
+      </div>
+    </div>
+    
+
+    <!-- 題目文字 -->
+    <div class="question-text" id="question-text">
+      你對「規劃未來」的態度是？
+    </div>
+
+    <!-- 選項（最多6個） -->
+    <div class="options">
+      <div class="option" data-index="0">A. 每一步都要計畫</div>
+      <div class="option" data-index="1">B. 有大方向就好</div>
+      <div class="option" data-index="2">C. 船到橋頭自然直</div>
+      <div class="option" data-index="3">D. 覺得沒意義</div>
+      <div class="option" data-index="4">E. 假裝有規劃，其實放任</div>
+    </div>
+
+    <div class="warning" id="warning">你還沒回答問題歐！</div>
+
+    <!-- 上一頁 / 下一頁 -->
+    <div class="nav-buttons">
+      <button class="button-left" data-prev="question3.html"></button>
+      <button class="button-right" data-next="question5.html"></button>
+    </div>
+  </div>
+
+  <script src="../scripts/question.js"></script>
+</body>
+</html>

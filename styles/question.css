@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  background-image: url(../images/question/question_background.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'LXGW WenKai Mono TC', 'Noto TCSans', sans-serif;
+}
+
+.question-container {
+  padding: 2rem;
+  color: #5e4a3c;
+}
+
+.question-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.question-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.progress-bar {
+  height: 8px;
+  background: #dcd2c1;
+  border-radius: 10px;
+}
+.progress {
+  height: 100%;
+  background: #5e4a3c;
+  border-radius: 10px;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+.question-text {
+  background: transparent;
+  border: 2px solid #8b6d53;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: larger;
+  text-shadow: 0 0 0.5px currentColor;
+  margin: 1.5rem 0;
+}
+
+.options .option {
+  background: #d4c2a4;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin: 1.5rem 0;
+  cursor: pointer;
+  font-size: large;
+  text-shadow: 0 0 0.5px currentColor;
+  transition: background 0.3s;
+}
+.options .option.selected {
+  background: #5e4a3c;
+  color: white;
+}
+
+.button-right {
+  position: fixed;
+  bottom: 5vh;
+  left: 75%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 100px;
+  background: url('../images/question/arrow_right.PNG') no-repeat center;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; 
+}
+
+.button-right:hover {
+  filter: brightness(0.9);
+}
+
+.button-right:active {
+  filter: brightness(1.1);
+}
+.button-left {
+  position: fixed;
+  bottom: calc(5vh + 10px);
+  left: 25%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 100px;
+  background: url('../images/question/arrow_left.PNG') no-repeat center;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  transition: filter 0.2s ease;
+  outline: none;
+  -webkit-tap-highlight-color: transparent; 
+}
+
+.button-left:hover {
+  filter: brightness(0.9);
+}
+
+.button-left:active {
+  filter: brightness(1.1);
+}
+
+.warning {
+  display: none;
+  background: rgba(255, 0, 0, 0.1);
+  color: red;
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  width: 80%;
+  max-width: 500px;
+}
+

@@ -1,0 +1,49 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+    height: 100%;
+    background-color: #efeae2;
+  }
+  
+  .start-screen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: #efeae2;
+    object-position: center;
+  }
+  
+  .bg-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .start-btn {
+    position: fixed;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5e4a3c;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+    text-decoration: none; /* 移除連結底線 */
+    text-align: center;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  
+  .start-btn:hover {
+    background-color: #7a5a49;
+  }
+  

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>題目</title>
+  <link rel="stylesheet" href="../styles/question.css" />
+  <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="question-container">
+    <!-- 題號與進度條 -->
+    <div class="question-header">
+      <div class="question-number" id="question-number" data-question="0">第 1 題</div>
+      <div class="progress-bar">
+        <div class="progress" id="progress" data-progress="10"></div>
+      </div>
+    </div>
+
+    <!-- 題目文字 -->
+    <div class="question-text" id="question-text">
+      你最怕的社交場合是？
+    </div>
+
+    <!-- 選項（最多6個） -->
+    <div class="options">
+      <div class="option" data-index="0">A. 跟完全不熟的人吃飯</div>
+      <div class="option" data-index="1">B. 要發言的大會議</div>
+      <div class="option" data-index="2">C. 相親或聯誼</div>
+      <div class="option" data-index="3">D. 親戚聚餐</div>
+      <div class="option" data-index="4">E. 不怕，反而喜歡</div>
+    </div>
+
+    <div class="warning" id="warning">你還沒回答問題歐！</div>
+
+    <!-- 上一頁 / 下一頁 -->
+    <div class="nav-buttons">
+      <button class="button-left" data-prev="index.html"></button>
+      <button class="button-right" data-next="question2.html"></button>
+    </div>
+  </div>
+
+  <script src="../scripts/question.js"></script>
+</body>
+</html>
