@@ -33,7 +33,7 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
     }
 
     const resultNum = match[1];
-    const imagePath = `../images/share/result${resultNum}.png`;  // ✅ 反引號
+    const imagePath = `../images/share/result${resultNum}.png`;
 
     const response = await fetch(imagePath);
     const blob = await response.blob();
@@ -41,7 +41,7 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `result${resultNum}.png`;  // ✅ 反引號
+    a.download = `result${resultNum}.png`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
