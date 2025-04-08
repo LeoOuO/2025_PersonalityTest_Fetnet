@@ -8,11 +8,11 @@ document.getElementById('shareBtn').addEventListener('click', async () => {
     }
 
     const resultNum = match[1];
-    const imagePath = `../images/share/result${resultNum}.png`;
+    const imagePath = `../images/share/result${resultNum}.png`;  // ✅ 改成反引號
 
     const response = await fetch(imagePath);
     const blob = await response.blob();
-    const file = new File([blob], `result${resultNum}.png`, { type: 'image/jpeg' });
+    const file = new File([blob], `result${resultNum}.png`, { type: 'image/png' });
 
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
       await navigator.share({
@@ -38,7 +38,7 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
     }
 
     const resultNum = match[1];
-    const imagePath = `../images/share/result${resultNum}.png`;
+    const imagePath = `../images/share/result${resultNum}.png`;  // ✅ 反引號
 
     const response = await fetch(imagePath);
     const blob = await response.blob();
@@ -46,7 +46,7 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `result${resultNum}.png`;
+    a.download = `result${resultNum}.png`;  // ✅ 反引號
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
