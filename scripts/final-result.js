@@ -18,6 +18,7 @@ document.getElementById('shareBtn').addEventListener('click', async () => {
       await navigator.share({
         files: [file],
         title: '你是什麼炸物？',
+        url: 'https://leoouo.github.io/2025_PersonalityTest_Fetnet/'
       });
     } else {
       alert('你的瀏覽器不支援圖片分享，建議用手機開啟這個頁面哦！');
