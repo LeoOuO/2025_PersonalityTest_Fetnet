@@ -1,7 +1,7 @@
 // 分享功能（保留）
 document.getElementById('shareBtn').addEventListener('click', async () => {
   try {
-    const match = window.location.pathname.match(/result_pages\/result(\d+)\.html$/);
+    const match = window.location.pathname.match(/results_pages\/result(\d+)\.html$/);
     if (!match) {
       alert('無法辨識結果頁面！');
       return;
@@ -31,7 +31,7 @@ document.getElementById('shareBtn').addEventListener('click', async () => {
 // 下載功能（保留這個 ✅）
 document.getElementById('downloadBtn').addEventListener('click', async () => {
   try {
-    const match = window.location.pathname.match(/result_pages\/result(\d+)\.html$/);
+    const match = window.location.pathname.match(/results_pages\/result(\d+)\.html$/);
     if (!match) {
       alert('無法辨識結果頁面！');
       return;
