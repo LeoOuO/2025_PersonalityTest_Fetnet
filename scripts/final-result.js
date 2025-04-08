@@ -1,14 +1,12 @@
-// 分享功能（保留）
 document.getElementById('shareBtn').addEventListener('click', async () => {
   try {
     const match = window.location.pathname.match(/results_pages\/result(\d+)\.html$/);
     if (!match) {
-      alert('無法辨識結果頁面！');
       return;
     }
 
     const resultNum = match[1];
-    const imagePath = `../images/share/result${resultNum}.png`;  // ✅ 改成反引號
+    const imagePath = `../images/share/result${resultNum}.png`; 
 
     const response = await fetch(imagePath);
     const blob = await response.blob();
@@ -18,23 +16,25 @@ document.getElementById('shareBtn').addEventListener('click', async () => {
       await navigator.share({
         files: [file],
         title: '你是什麼炸物？',
+      });
+    } else if (navigator.share) {
+      await navigator.share({
+        title: '你是什麼炸物？',
+        text: '快來測你的炸物人格！',
         url: 'https://leoouo.github.io/2025_PersonalityTest_Fetnet/'
       });
     } else {
-      alert('你的瀏覽器不支援圖片分享，建議用手機開啟這個頁面哦！');
+      alert('你的裝置不支援分享功能喔 QQ');
     }
   } catch (error) {
-    console.error('分享錯誤:', error);
-    alert('圖片讀取或分享失敗，請檢查圖片路徑是否正確。');
+    console.error('分享錯誤', error);
   }
 });
 
-// 下載功能（保留這個 ✅）
 document.getElementById('downloadBtn').addEventListener('click', async () => {
   try {
     const match = window.location.pathname.match(/results_pages\/result(\d+)\.html$/);
     if (!match) {
-      alert('無法辨識結果頁面！');
       return;
     }
 
@@ -53,7 +53,6 @@ document.getElementById('downloadBtn').addEventListener('click', async () => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   } catch (error) {
-    console.error('下載錯誤:', error);
-    alert('圖片下載失敗，請檢查圖片路徑是否正確。');
+    console.error('下載錯誤', error);
   }
 });
