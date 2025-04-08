@@ -15,16 +15,10 @@ document.getElementById('shareBtn').addEventListener('click', async () => {
     if (navigator.canShare && navigator.canShare({ files: [file] })) {
       await navigator.share({
         files: [file],
-        title: '你是什麼炸物？',
-      });
-    } else if (navigator.share) {
-      await navigator.share({
-        title: '你是什麼炸物？',
-        text: '快來測你的炸物人格！',
-        url: 'https://leoouo.github.io/2025_PersonalityTest_Fetnet/'
+        title: '你是什麼炸物？\n快來測試你的炸物人格！\nhttps://leoouo.github.io/2025_PersonalityTest_Fetnet/',
       });
     } else {
-      alert('你的裝置不支援分享功能喔 QQ');
+      alert('你的瀏覽器不支援圖片分享，建議用手機開啟這個頁面哦！');
     }
   } catch (error) {
     console.error('分享錯誤', error);
